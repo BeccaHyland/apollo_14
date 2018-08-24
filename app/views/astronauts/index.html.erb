@@ -1,0 +1,7 @@
+<h1>All Astronauts</h1>
+
+<ul id="astronauts">
+  <% @astronauts.each do |a| %>
+    <li> Name: <%= a.name %>, Age: <%= a.age %>, Job: <%= a.job %> </li>
+  <% end %>
+</ul>
