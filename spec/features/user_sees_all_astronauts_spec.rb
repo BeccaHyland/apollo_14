@@ -7,7 +7,7 @@ describe "user sees all astronauts" do
       astro_2 = Astronaut.create!(name: "Ella", age: 29, job: "Science Officer")
 
       visit '/astronauts'
-      save_and_open_page
+    
       expect(page).to have_content(astro_1.name)
       expect(page).to have_content(astro_1.age)
       expect(page).to have_content(astro_1.job)
