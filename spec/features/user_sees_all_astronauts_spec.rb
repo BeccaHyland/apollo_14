@@ -22,9 +22,17 @@ describe "user sees all astronauts" do
 
       visit '/astronauts'
       save_and_open_page
-      
+
 
       expect(page).to have_content("Average Astronaut Age: #{Astronaut.avg_age}")
+    end
+
+    it "displays space missions for each astronaut"
+    astro_1 = Astronaut.create!(name: "Jane", age: 31, job: "Commander")
+    astro_2 = Astronaut.create!(name: "Ella", age: 29, job: "Science Officer")
+
+    sm_1 = SpaceMission.create!(title: "Mission 1", trip_length: 100)
+
     end
   end
 end
